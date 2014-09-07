@@ -16,5 +16,9 @@ Assignment: Goal1: Assignment: Duel1
     //player damage
     var player1Damage = 20;
     var player2Damage = 20;
+
+    //player health
+    var player1Health = 100;
+    var player2Health = 100;
     
 })();
