@@ -9,4 +9,9 @@ Assignment: Goal1: Assignment: Duel1
 
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
+    //player name
+    var playerOneName = "Wolverine";
+    var playerTwoName = "Nightwing";
+
+    
 })();
