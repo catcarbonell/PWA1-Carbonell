@@ -32,9 +32,15 @@ Assignment: Goal1: Assignment: Duel1
 //fight function: executed for the purpose of taking away the player HP (Health)
 function fight(){
 
+    console.log('in the fight function');   // for troubleshooting purposes
+
+    for (var i = 0; i < 10; i++){           //if 'i' is less than 10, add 1 to i
+        console.log(i);
+
+    };
 
 
-    winnerCheck();          //runs winnerCheck function
+    //winnerCheck();                         //runs winnerCheck function
 
 };
 
@@ -46,7 +52,7 @@ function winnerCheck(){
 
 /* PROGRAM START */
 
-console.log('program');     //for troubleshooting purposes when checking code in browser
+console.log('program starts');     //for troubleshooting purposes when checking code in browser
 
 fight();
 
