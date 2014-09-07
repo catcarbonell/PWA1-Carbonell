@@ -9,6 +9,8 @@ Assignment: Goal1: Assignment: Duel1
 
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
+//VARIABLES
+
     //player name
     var player1Name = "Wolverine";
     var player2Name = "Nightwing";
@@ -24,7 +26,15 @@ Assignment: Goal1: Assignment: Duel1
    //base round
     var round = 1;
 
-})();
 
-//FIGHT function: executed for the purpose of taking away the player HP (Health)
+//FUNCTIONS
+
+//fight function: executed for the purpose of taking away the player HP (Health)
 function fight(){};
+
+//winnerCheck function: executed each time after fight function is run to end or continue fight function/rounds
+function winnerCheck(){};
+
+
+
+})();
