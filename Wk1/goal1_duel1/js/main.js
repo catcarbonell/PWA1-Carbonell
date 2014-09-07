@@ -20,5 +20,7 @@ Assignment: Goal1: Assignment: Duel1
     //player health
     var player1Health = 100;
     var player2Health = 100;
-    
+
+   //base round
+    var round = 1;
 })();
