@@ -33,22 +33,25 @@ Assignment: Goal1: Assignment: Duel1
 function fight(){
 
     console.log('in the fight function');   // for troubleshooting purposes
+    alert(player1Name + ":" + player1Health + " *VS* " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their starting HP
+
+
 
     for (var i = 0; i < 10; i++){           //if 'i' is less than 10, add 1 to i
         console.log(i);
 
-    };
+    }
 
 
     //winnerCheck();                         //runs winnerCheck function
 
-};
+}
 
 
 //winnerCheck function: executed each time after fight function is run to end or continue fight function/rounds
 function winnerCheck(){
 
-};
+}
 
 /* PROGRAM START */
 
