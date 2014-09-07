@@ -30,11 +30,24 @@ Assignment: Goal1: Assignment: Duel1
 //FUNCTIONS
 
 //fight function: executed for the purpose of taking away the player HP (Health)
-function fight(){};
+function fight(){
+
+
+
+    winnerCheck();          //runs winnerCheck function
+
+};
+
 
 //winnerCheck function: executed each time after fight function is run to end or continue fight function/rounds
-function winnerCheck(){};
+function winnerCheck(){
 
+};
 
+/* PROGRAM START */
+
+console.log('program');     //for troubleshooting purposes when checking code in browser
+
+fight();
 
 })();
