@@ -50,8 +50,7 @@ function fight(){
         player1Health -= f1;                // same as player1Health = player1Health - f1
         player2Health -= f2;
 
-        console.log(player1Health);
-        console.log(player2Health);
+       console.log(player1Name + ":" + player1Health + " " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
     }
 
 
