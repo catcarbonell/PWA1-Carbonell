@@ -46,8 +46,12 @@ function fight(){
         var f1 =  Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1);
         var f2 =  Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2);
 
-        console.log(f1);
-        console.log(f2);
+        //inflict damage
+        player1Health -= f1;                // same as player1Health = player1Health - f1
+        player2Health -= f2;
+
+        console.log(player1Health);
+        console.log(player2Health);
     }
 
 
