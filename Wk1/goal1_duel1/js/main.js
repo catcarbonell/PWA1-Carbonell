@@ -23,4 +23,8 @@ Assignment: Goal1: Assignment: Duel1
 
    //base round
     var round = 1;
+
 })();
+
+//FIGHT function: executed for the purpose of taking away the player HP (Health)
+function fight(){};
