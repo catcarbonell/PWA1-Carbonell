@@ -35,11 +35,17 @@ function fight(){
     console.log('in the fight function');   // for troubleshooting purposes
     alert(player1Name + ":" + player1Health + " *VS* " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their starting HP
 
-
-
     for (var i = 0; i < 10; i++){           //if 'i' is less than 10, add 1 to i
-        console.log(i);
 
+
+
+        //Minimum damage dealt toward each player
+        var minDamage1 = player1Damage * .5;
+        var minDamage2 = player2Damage * .5;
+        //Random Damage equation variables -- creates the random amount of damage dealt toward the players
+        var f1 =  Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1);
+        var f2 =  Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2);
+        
     }
 
 
