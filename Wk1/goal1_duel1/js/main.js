@@ -12,8 +12,8 @@ Assignment: Goal1: Assignment: Duel1
 //VARIABLES
 
     //player name
-    var player1Name = "Wolverine";
-    var player2Name = "Nightwing";
+    var player1Name = "Nightwing";
+    var player2Name = "Wolverine";
 
     //player damage
     var player1Damage = 20;
