@@ -45,7 +45,9 @@ function fight(){
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
         var f1 =  Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1);
         var f2 =  Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2);
-        
+
+        console.log(f1);
+        console.log(f2);
     }
 
 
