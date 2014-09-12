@@ -35,7 +35,7 @@
 	var search = function(query){        // search FN
 		
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");       //joins method -- joining the search query into a string, returning it to the console as an array
+		var queryArray = query.split(" ");       //joins method -- joining the search query into a string, returning it to the console as an array
 		// array to store matched results from database.js
 		var results = [];                       //I seriously do not know what happened here. Is this supposed to be a function?
 
