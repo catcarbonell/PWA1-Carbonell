@@ -48,8 +48,8 @@ function fight(){
         var f2 =  Math.floor(Math.random() * (Wolverine[1] - minDamage2) + minDamage2);
 
         //inflict damage
-        player1Health -= f1;                // same as player1Health = player1Health - f1
-        player2Health -= f2;
+        Nightwing[2] -= f1;                // Nightwing's hp index - the damage variables
+        Wolverine[2] -= f2;                // Wolverine's hp index - the damage variables
 
        // Hero damage vs HP display
         console.log(player1Name + ":" + player1Health + " " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
