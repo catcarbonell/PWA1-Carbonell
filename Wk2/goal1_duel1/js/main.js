@@ -12,10 +12,10 @@ Assignment: Goal1: Assignment: Duel1
 //VARIABLES
 
     //player name
-    var player1Name = "Nightwing";
-    var player2Name = "Wolverine";
+    var Nightwing = ["Nightwing",20,100];            // Player 1 stats array: Nightwing, 20 damage points(dp), 100 health points(hp)
+    var Wolverine = ["Wolverine",20,100];            // Player 2 stats array: Wolverine, 20 dp, 100 hp
 
-    //player damage
+    /*//player damage
     var player1Damage = 20;
     var player2Damage = 20;
 
@@ -23,6 +23,8 @@ Assignment: Goal1: Assignment: Duel1
     var player1Health = 100;
     var player2Health = 100;
 
+   //commented out the dp and hp since we're using these variables in an array
+*/
    //base round
     var round = 0;
 
@@ -35,11 +37,11 @@ function fight(){
     console.log('in the fight function');   // for troubleshooting purposes
     alert(player1Name + ":" + player1Health + " *VS* " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their starting HP
 
-    for (var i = 0; i < 10; i++){           //if 'i' is less than 10, add 1 to i
+    for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
         //Minimum damage dealt toward each player
-        var minDamage1 = player1Damage * .5;
-        var minDamage2 = player2Damage * .5;
+        var minDamage1 = Nightwing[1] * .5; // utilizing the new array variable
+        var minDamage2 = Wolverine[1] * .5;
 
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
         var f1 =  Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1);
