@@ -36,11 +36,11 @@
       <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19512194" vertical-offset="30" max-vertical-offset="1920">
-              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+            <state vertical-scroll-proportion="1.0" vertical-offset="1200" max-vertical-offset="1905">
+              <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1410482040000" expanded="true" signature="4321:4336" placeholder="..." />
+                <marker date="1410482342000" expanded="true" signature="4302:4317" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -252,7 +252,7 @@
           <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1410482040000" expanded="true" signature="4321:4336" placeholder="..." />
+            <marker date="1410482342000" expanded="true" signature="4302:4317" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -279,7 +279,7 @@
           <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1410482040000" expanded="true" signature="4321:4336" placeholder="..." />
+            <marker date="1410482342000" expanded="true" signature="4302:4317" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -310,11 +310,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19512194" vertical-offset="30" max-vertical-offset="1920">
-          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        <state vertical-scroll-proportion="1.0" vertical-offset="1200" max-vertical-offset="1905">
+          <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1410482040000" expanded="true" signature="4321:4336" placeholder="..." />
+            <marker date="1410482342000" expanded="true" signature="4302:4317" placeholder="..." />
           </folding>
         </state>
       </provider>

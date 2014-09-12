@@ -13,11 +13,11 @@
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) === " "){     //added triple equal-sign
 			query = query.substring(1, query.length);       //query.length -- checks the length the user query (what is typed into the search box)
-		}; //end while statement
+		} //end while statement
 
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);     //method .substring takes the characters from the specified string and returns a new sub string
-		; //end while statement
+		 //end while statement
 		
 		// Check search length, must have 3 characters
 		if(query.length < 3){               //alerts user that their search query is too small, it must be more than 3 characters
@@ -26,10 +26,10 @@
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();        // the .focus method gives emphasis or focus onto the searchInput variable--what is searched for
 			return;                     // returns the searchInput function
-		};//end if statement
+		} //end if statement
 		
 		search(query);                  // calling the search FN
-	};
+	}
 	
 	// Finds search matches
 	var search = function(query){        // search FN
@@ -57,11 +57,9 @@
                 var compare = dbitem.indexOf(qitem);        //
                 if (compare !== -1) {     //if the compare variable is NOT -1, result array is pushed-- in this case it is the video title is added to the results array
                     results.push(db[i]);
-                }
-                ;// end if statement
-            }
-            ;//end for statement
-        };
+                } // end if statement
+            } //end for statement
+
 		
 		results.sort();     // method organizes results
 		
@@ -70,8 +68,9 @@
 			noMatch();  // runs the no match FN
 		}else{
 			showMatches(results);       // runs the showMatches FN which prints the results
-		};
-	};
+		}  //end if-else statement
+
+	}
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){       //noMatch FN
@@ -104,7 +103,7 @@
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>'; //html adds the HTML link tag with the url and title of the video link
-		}; //end for loop
+		}  //end for loop
 
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
@@ -113,11 +112,11 @@
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function() {        //document.forms is executed/submitted and this function runs
         var query = searchInput.value;  //search input value is wholly submitted to the server from where the form is submitted
-        validqte(query);    //validate FN is run
+        validate(query);    //validate FN is run
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
         return false;
     };
 
-        )} ();
+        }();
