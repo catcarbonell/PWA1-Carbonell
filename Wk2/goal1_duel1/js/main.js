@@ -26,7 +26,7 @@ Assignment: Goal1: Assignment: Duel1
    //commented out the dp and hp since we're using these variables in an array
 */
    //base round
-    var round = 0;
+    var round = 0;                           //default round is 0, counts up as the fight progresses
 
 
 //FUNCTIONS
@@ -40,12 +40,12 @@ function fight(){
     for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
         //Minimum damage dealt toward each player
-        var minDamage1 = Nightwing[1] * .5; // utilizing the new array variable
-        var minDamage2 = Wolverine[1] * .5;
+        var minDamage1 = Nightwing[1] * .5; // utilizing the new array variable for Nightwing -- using the 1 index/dp
+        var minDamage2 = Wolverine[1] * .5; // new damage dealer for Wolverine
 
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
-        var f1 =  Math.floor(Math.random() * (player1Damage - minDamage1) + minDamage1);
-        var f2 =  Math.floor(Math.random() * (player2Damage - minDamage2) + minDamage2);
+        var f1 =  Math.floor(Math.random() * (Nightwing[1] - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Nightwing
+        var f2 =  Math.floor(Math.random() * (Wolverine[1] - minDamage2) + minDamage2);
 
         //inflict damage
         player1Health -= f1;                // same as player1Health = player1Health - f1
