@@ -45,14 +45,14 @@ function fight(){
 
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
         var f1 =  Math.floor(Math.random() * (Nightwing[1] - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Nightwing
-        var f2 =  Math.floor(Math.random() * (Wolverine[1] - minDamage2) + minDamage2);
+        var f2 =  Math.floor(Math.random() * (Wolverine[1] - minDamage2) + minDamage2); // The equation for the random amount of total damage dealt by Wolverine
 
         //inflict damage
         Nightwing[2] -= f1;                // Nightwing's hp index - the damage variables
         Wolverine[2] -= f2;                // Wolverine's hp index - the damage variables
 
        // Hero damage vs HP display
-        console.log(player1Name + ":" + player1Health + " " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
+        console.log(Nightwing[0] + ":" + Nightwing[2] + " " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
 
 
 
