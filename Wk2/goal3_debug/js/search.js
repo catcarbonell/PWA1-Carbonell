@@ -71,7 +71,7 @@
 			showMatches(results);       // runs the showMatches FN which prints the results
 		}  //end if-else statement
 
-	}
+	};
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){       //noMatch FN
@@ -117,7 +117,7 @@
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
-        return false;
-    };
+        return false;   // makes sure this validate query doesn't bubble
+    };      // end document.forms function
 
-        })();
+        })(); //closed self-executing function
