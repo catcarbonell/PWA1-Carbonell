@@ -29,7 +29,7 @@
 		} //end if statement
 		
 		search(query);                  // calling the search FN
-	};
+	};                                  // end validate function
 	
 	// Finds search matches
 	var search = function(query){        // search FN
@@ -58,9 +58,9 @@
                 if (compare !== -1) {     //if the compare variable is NOT -1, result array is pushed-- in this case it is the video title is added to the results array
                     results.push(db[i]);
                 } // end if statement
-            } //end for statement
+            } //end for loop queryArray.length
 
-        }
+        }   //end for loop db.length
 
 		results.sort();     // method organizes results
 		
@@ -71,16 +71,16 @@
 			showMatches(results);       // runs the showMatches FN which prints the results
 		}  //end if-else statement
 
-	};
+	}; //end search function
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){       //noMatch FN
-		var html = ''+
+		html = ''+
 			'<p>No Results found.</p>'+
 			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
 		;
 		resultsDIV.innerHTML = html;        //resultsDiv elements are returned; retrieved from the HTML file
-	};
+	}; //end noMatch function
 	
 	// Put matches into page as paragraphs with anchors
 	var showMatches = function(results){    //showMatches FN
@@ -89,7 +89,7 @@
 		var html = '<p>Results</p>',        //the syntax displayed for the results
 			title, 
 			url
-		;
+		; // end var html
 		
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){       //if the variable "i" is less than variable "j"--which is the char length of results--adds 1 to i
@@ -107,7 +107,7 @@
 		}  //end for loop
 
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-	};
+	}; //end showMatches function
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
