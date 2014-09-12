@@ -15,10 +15,10 @@
 			query = query.substring(1, query.length);       //query.length -- checks the length the user query (what is typed into the search box)
 		} //end while statement
 
-		while(query.charAt(query.length-1) === ""){
-			query = query.substring(0, query.length-1);     //method .substring takes the characters from the specified string and returns a new sub string
-		 //end while statement
-		
+		while(query.charAt(query.length-1) === "") {
+            query = query.substring(0, query.length - 1);     //method .substring takes the characters from the specified string and returns a new sub string
+            //end while statement
+        }
 		// Check search length, must have 3 characters
 		if(query.length < 3){               //alerts user that their search query is too small, it must be more than 3 characters
 			alert("Your search query is too small, try again."); // SYNTAX -- needed to add the ending quote
@@ -29,7 +29,7 @@
 		} //end if statement
 		
 		search(query);                  // calling the search FN
-	}
+	};
 	
 	// Finds search matches
 	var search = function(query){        // search FN
@@ -60,7 +60,8 @@
                 } // end if statement
             } //end for statement
 
-		
+        }
+
 		results.sort();     // method organizes results
 		
 		// Check that matches were found, and run output functions
@@ -110,7 +111,7 @@
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function() {        //document.forms is executed/submitted and this function runs
+	document.forms[0].onsubmit = function(){        //document.forms is executed/submitted and this function runs
         var query = searchInput.value;  //search input value is wholly submitted to the server from where the form is submitted
         validate(query);    //validate FN is run
 
@@ -119,4 +120,4 @@
         return false;
     };
 
-        }();
+        })();
