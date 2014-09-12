@@ -58,7 +58,7 @@ function fight(){
     var results = winnerCheck();           //runs winnerCheck function
     console.log(results);
 
-    if(results === "no winner"){
+    if(results === "no winner"){        //if there is no winner, this no winner within the round, this if-else statement is run
         round++;
         alert(" ROUND "+ round + " OVER || " + player1Name + ":" + player1Health + " *VS* " +  player2Name + ":" + player2Health);
     }else{
