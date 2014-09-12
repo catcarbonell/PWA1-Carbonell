@@ -5,19 +5,19 @@
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),        // document.getElementById method returns an element with the attributed ID name with the specified value
 		searchInput = document.forms[0].search,                 // retrieves any input information/characters/etc from the form on the site
-		currentSearch = ''                                      // by default, the search box is left blank
-	;
+		currentSearch = '';                                      // by default, the search box is left blank
 	
 	// Validates search query
-	var validqte = function(query){        // variable calling a function -- took away one equal sign (=)
+	var validate = function(query){       // corrected spelling error variable calling a function -- took away one equal sign (=)
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) === " "){     //added triple equal-sign
 			query = query.substring(1, query.length);       //query.length -- checks the length the user query (what is typed into the search box)
-		};
+		}; //end while statement
+
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);     //method .substring takes the characters from the specified string and returns a new sub string
-		;
+		; //end while statement
 		
 		// Check search length, must have 3 characters
 		if(query.length < 3){               //alerts user that their search query is too small, it must be more than 3 characters
@@ -26,7 +26,7 @@
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();        // the .focus method gives emphasis or focus onto the searchInput variable--what is searched for
 			return;                     // returns the searchInput function
-		};
+		};//end if statement
 		
 		search(query);                  // calling the search FN
 	};
@@ -36,31 +36,32 @@
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");       //joins method -- joining the search query into a string, returning it to the console as an array
-		
 		// array to store matched results from database.js
 		var results = [];                       //I seriously do not know what happened here. Is this supposed to be a function?
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){        //db = database, checks the back-end server side database (in this case: database.js) and matches the length of user-side query with the information in the db
-		
-			// each db[i] is a single video item, each title ends with a pipe "|"
-			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
-			
-			// loop through the user's search query words
-			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){   //if the variable jj length is greater than ii, then this for-loop adds 1 to ii
-				var qitem = queryArray[ii].tolowercase();       //the query item takes the ii variable and converts it to lowercase
-				
-				// is the keyword anywhere in the video title?
-				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);        //
-				if(compare !== -1){     //if the compare variable is NOT -1, result array is pushed-- in this case it is the video title is added to the results array
-					results.push(db[i]);
-				};
-			;
-		;
+		for(var i=0, j=db.length; i<j; i++) {        //db = database, checks the back-end server side database (in this case: database.js) and matches the length of user-side query with the information in the db
+
+            // each db[i] is a single video item, each title ends with a pipe "|"
+            // save a lowercase variable of the video title
+            var dbTitleEnd = db[i].indexOf('|');
+            var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+
+            // loop through the user's search query words
+            // save a lowercase variable of the search keyword
+            for (var ii = 0, jj = queryArray.length; ii < jj; ii++) {   //if the variable jj length is greater than ii, then this for-loop adds 1 to ii
+                var qitem = queryArray[ii].tolowercase();       //the query item takes the ii variable and converts it to lowercase
+
+                // is the keyword anywhere in the video title?
+                // If a match is found, push full db[i] into results array
+                var compare = dbitem.indexOf(qitem);        //
+                if (compare !== -1) {     //if the compare variable is NOT -1, result array is pushed-- in this case it is the video title is added to the results array
+                    results.push(db[i]);
+                }
+                ;// end if statement
+            }
+            ;//end for statement
+        };
 		
 		results.sort();     // method organizes results
 		
@@ -119,4 +120,4 @@
         return false;
     };
 
-}) ();
+        )} ();
