@@ -1,6 +1,6 @@
 /*
 Name: Cathleen Carbonell
-Date: 9/07/2014
+Date: 9/12/2014
 Assignment: Goal1: Assignment: Duel1
  */
 
@@ -35,7 +35,7 @@ Assignment: Goal1: Assignment: Duel1
 function fight(){
 
     console.log('in the fight function');   // for troubleshooting purposes
-    alert(player1Name + ":" + player1Health + " *VS* " + player2Name + ":" + player2Health); // calls an alert displaying player 1 and 2's names and their starting HP
+    alert(Nightwing[0]+ ":" + Nightwing[2] + " *VS* " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their starting HP
 
     for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
@@ -58,14 +58,14 @@ function fight(){
 
 
     var results = winnerCheck();           //runs winnerCheck function
-    console.log(results);
+    console.log(results);                  // prints results from winnerCheck FN
 
     if(results === "no winner"){        //if there is no winner, this no winner within the round, this if-else statement is run
         round++;
-        alert(" ROUND "+ round + " OVER || " + player1Name + ":" + player1Health + " *VS* " +  player2Name + ":" + player2Health);
+        alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
     }else{
         alert(results);
-        break;
+        break;      // ends the if-else check
     } // end if-else statement
 
    }   //end for-loop
@@ -75,20 +75,20 @@ function fight(){
 
 //winnerCheck FN: executed each time after fight function is run to end or continue fight function/rounds
 function winnerCheck(){
-    console.log("in winnerCheck FN");
+    console.log("in winnerCheck FN");   // for troubleshooting purposes, console.log
 
     var result = "no winner";       //Runs if both players lose the same amount of HP in the end
 
-    if (player1Health < 1 && player2Health < 1) {
+    if (Nightwing[2] < 1 && Wolverine[2] < 1) {
         result = "DOUBLE KO! No winner!";
-    } else if(player1Health<1){     //Runs if player 1 runs out of HP first
-        result = player2Name + " WINS!!!"
+    } else if(Nightwing[2]<1){     //Runs if player 1 runs out of HP first
+        result = Wolverine[0] + " WINS!!!"
 
-    } else if(player2Health<1){     //Runs if player 2 runs out of HP first
-        result = player1Name + " WINS!!!"
+    } else if(Wolverine[2]<1){     //Runs if player 2 runs out of HP first
+        result = Nightwing[0] + " WINS!!!"
     } //end if-else statement
 
-   return result;
+   return result;   //  returns the winnerCheck result
 
 }//end winnerCheck FN
 
