@@ -96,6 +96,6 @@ function winnerCheck(){
 
 console.log('program starts');     //for troubleshooting purposes when checking code in browser console
 
-fight();
+fight(); //calls fight function
 
 })(); //end of self-executing FN
