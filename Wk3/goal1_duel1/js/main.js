@@ -77,7 +77,7 @@ function fight(){
     console.log('in the fight function');   // for troubleshooting purposes
     //alert(Nightwing[0]+ ":" + Nightwing[2] + " *VS* " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their starting HP
 
-// alert("got here 1");
+    
     for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
         //Minimum damage dealt toward each player
@@ -85,12 +85,12 @@ function fight(){
         var minDamage2 = champ2.dp * .5; // new damage dealer for Wolverine
 
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
-        var f1 =  Math.floor(Math.random() * (champ1.dp - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Nightwing
-        var f2 =  Math.floor(Math.random() * (champ2.dp - minDamage2) + minDamage2); // The equation for the random amount of total damage dealt by Wolverine
+        var f1 =  Math.floor(Math.random() * (champ1.dp - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Champ1
+        var f2 =  Math.floor(Math.random() * (champ2.dp - minDamage2) + minDamage2); // The equation for the random amount of total damage dealt by Champ2
 
         //inflict damage
-       champ1.hp -= f1;                // Nightwing's hp index - the damage variables
-       champ2.hp -= f2;                // Wolverine's hp index - the damage variables
+       champ1.hp -= f1;                // Champ1's hp index - the damage variables
+       champ2.hp -= f2;                // Champ2's hp index - the damage variables
 
        // Hero damage vs HP display
        // console.log(Nightwing[0] + ":" + Nightwing[2] + " " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
@@ -107,8 +107,9 @@ function fight(){
     }else{
         //alert(results);
         roundtxt.innerHTML = results;
+        button.removeEventListener("click", fight, false);
         action_btn.innerHTML = "Reset";
-        action_btnEvent.addEventListener("click", location.reload(), true);
+        action_btnEvent.onclick(console.log("button fire"));
         dmgPrint();
         break;      // ends the if-else check
     } // end if-else statement
