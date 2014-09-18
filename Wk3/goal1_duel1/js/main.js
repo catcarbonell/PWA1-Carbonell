@@ -14,12 +14,12 @@ Assignment: Goal1: Assignment: Duel1
     var champ2hp = document.querySelector("#champ2").querySelector("h2");     // DOM selector for champ2 HP
     var champ1name = document.querySelector("#champ1").querySelector("#champ1name");    // DOM selector for champ1 name
     var champ2name = document.querySelector("#champ2").querySelector("#champ2name");    // DOM selector for champ2 name
-    var action_btn = document.querySelector("#fight_btn").querySelector("#action_btn"); // DOM selector for the RESET FIGHT button
+    var action_btn = document.querySelector("#fight_btn").querySelector("#action_btn"); // DOM selector for the END of FIGHT button
     var roundtxt = document.querySelector("h1");                                   // DOM selector for the round changer
     var button = document.getElementById("fight_btn");                            // DOM selector for initial FIGHT button
-    var action_btnEvent = document.getElementById("action_btn");                // DOM selector for the RESET FIGHT button
+    var action_btnEvent = document.getElementById("action_btn");                // DOM selector for the END of FIGHT button
 
-    button.addEventListener("click", fight, false);
+    button.addEventListener("click", fight, false);             //  Action event for the FIGHT button
 
 //VARIABLES
     //FIGHTER OBJECT ARRAYS:
@@ -33,11 +33,12 @@ Assignment: Goal1: Assignment: Duel1
         hp: 100             // index1.hp
         }];
 
-    var champ1 = fighters[0];
-    var champ2 = fighters[1];
+// Re-defining variables for the fighters for future ease of reference
+    var champ1 = fighters[0];   // Champ1 object
+    var champ2 = fighters[1];   // Champ 2 object
 
 
-console.log(champ1.name , champ2.name);
+console.log(champ1.name , champ2.name); // test print if champ1 and champ2 variables are working
 
     /*//player name
     var Nightwing = ["Nightwing",20,100];            // Player 1 stats array: Nightwing, 20 damage points(dp), 100 health points(hp)
