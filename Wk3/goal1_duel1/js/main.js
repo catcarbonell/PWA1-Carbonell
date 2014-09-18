@@ -9,6 +9,14 @@ Assignment: Goal1: Assignment: Duel1
 
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
+// DOM Pieces
+    var Nightwing_txt = document.querySelector(Nightwing).querySelector(p);     // selects the CSS Nightwing ID
+    var Wolverine_txt = document.querySelector(Wolverine).querySelector(p);     // selects the CSS Wolverine ID
+    var roundtxt = document.querySelector(h5);                                  // selects the roundtxt ID
+    var button = document.getElementById(fight_btn);                            // selects the fight button
+
+    button.addEventListener("click", fight, false);
+
 //VARIABLES
     //FIGHTER OBJECT ARRAYS:
     var fighters =[{
