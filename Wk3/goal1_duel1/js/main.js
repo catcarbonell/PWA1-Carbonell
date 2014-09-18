@@ -60,17 +60,17 @@ console.log(champ1.name , champ2.name); // test print if champ1 and champ2 varia
     var round = 0;                           //default round is 0, counts up as the fight progresses
 
 //Text for round
-    roundtxt.innerHTML = "Click FIGHT to START!";
-    champ1name.innerHTML = champ1.name;
-    champ2name.innerHTML = champ2.name;
-    champ1hp.innerHTML = champ1.hp;
-    champ2hp.innerHTML = champ2.hp;
+    roundtxt.innerHTML = "Click FIGHT to START!";       // Initial middle text when starting the app
+    champ1name.innerHTML = champ1.name;                 // Prints champ1's name on the page
+    champ2name.innerHTML = champ2.name;                 // Prints champ2's name on the page
+    champ1hp.innerHTML = champ1.hp;                     // Prints champ1's hp on the page
+    champ2hp.innerHTML = champ2.hp;                     // Prints champ2's hp on the page
 
 //FUNCTIONS
 function dmgPrint(){
-    champ1hp.innerHTML = champ1.hp;
-    champ2hp.innerHTML = champ2.hp;
-};
+    champ1hp.innerHTML = champ1.hp;                     // Prints champ1 damage after clicking FIGHT btn
+    champ2hp.innerHTML = champ2.hp;                     // Prints champ2 damage after clicking FIGHT btn
+}
 //fight function: executed for the purpose of taking away the player HP (Health)
 function fight(){
 
