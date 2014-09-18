@@ -10,14 +10,14 @@ Assignment: Goal1: Assignment: Duel1
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
 // DOM Pieces
-    var champ1hp = document.querySelector("#champ1").querySelector("h2");     //
-    var champ2hp = document.querySelector("#champ2").querySelector("h2");     //
-    var champ1name = document.querySelector("#champ1").querySelector("#champ1name");
-    var champ2name = document.querySelector("#champ2").querySelector("#champ2name");
-    var action_btn = document.querySelector("#fight_btn").querySelector("#action_btn");
-    var roundtxt = document.querySelector("h1");                                   // selects the h1 element
-    var button = document.getElementById("fight_btn");                            // selects the fight button
-    var action_btnEvent = document.getElementById("action_btn");
+    var champ1hp = document.querySelector("#champ1").querySelector("h2");     // DOM selector for champ1 HP
+    var champ2hp = document.querySelector("#champ2").querySelector("h2");     // DOM selector for champ2 HP
+    var champ1name = document.querySelector("#champ1").querySelector("#champ1name");    // DOM selector for champ1 name
+    var champ2name = document.querySelector("#champ2").querySelector("#champ2name");    // DOM selector for champ2 name
+    var action_btn = document.querySelector("#fight_btn").querySelector("#action_btn"); // DOM selector for the RESET FIGHT button
+    var roundtxt = document.querySelector("h1");                                   // DOM selector for the round changer
+    var button = document.getElementById("fight_btn");                            // DOM selector for initial FIGHT button
+    var action_btnEvent = document.getElementById("action_btn");                // DOM selector for the RESET FIGHT button
 
     button.addEventListener("click", fight, false);
 
@@ -107,8 +107,8 @@ function fight(){
         //alert(results);
         roundtxt.innerHTML = results;
         action_btn.innerHTML = "Reset";
-        //action_btnEvent.addEventListener("click", location.reload(), false);
-        //dmgPrint();
+        action_btnEvent.addEventListener("click", location.reload(), true);
+        dmgPrint();
         break;      // ends the if-else check
     } // end if-else statement
 
