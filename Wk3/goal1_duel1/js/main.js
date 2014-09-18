@@ -10,7 +10,7 @@ Assignment: Goal1: Assignment: Duel1
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
 // DOM Pieces
-    var champ1hp = document.querySelector("#champ1").querySelector("h2");     // DOM selector for champ1 HP
+    var champ1hp = document.querySelector("#champ1").querySelector("h2");     // DOM selector for champ1 HP, HTML reference div id = champ1, <h2>
     var champ2hp = document.querySelector("#champ2").querySelector("h2");     // DOM selector for champ2 HP
     var champ1name = document.querySelector("#champ1").querySelector("#champ1name");    // DOM selector for champ1 name
     var champ2name = document.querySelector("#champ2").querySelector("#champ2name");    // DOM selector for champ2 name
@@ -71,13 +71,18 @@ function dmgPrint(){
     champ1hp.innerHTML = champ1.hp;                     // Prints champ1 damage after clicking FIGHT btn
     champ2hp.innerHTML = champ2.hp;                     // Prints champ2 damage after clicking FIGHT btn
 }
+
+function fightReset(){
+    location.reload(true);
+}
+
 //fight function: executed for the purpose of taking away the player HP (Health)
 function fight(){
 
     console.log('in the fight function');   // for troubleshooting purposes
     //alert(Nightwing[0]+ ":" + Nightwing[2] + " *VS* " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their starting HP
 
-    
+
     for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
         //Minimum damage dealt toward each player
@@ -101,17 +106,18 @@ function fight(){
     if(results === "no winner"){        //if there is no winner, this no winner within the round, this if-else statement is run
         round++;
         //alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
-        roundtxt.innerHTML = " ROUND "+ round;
+        roundtxt.innerHTML = " ROUND "+ round + "<br><br>";
         dmgPrint();
         break;
     }else{
         //alert(results);
         roundtxt.innerHTML = results;
         button.removeEventListener("click", fight, false);
-        action_btn.innerHTML = "Reset";
-        action_btnEvent.onclick(console.log("button fire"));
         dmgPrint();
-        break;      // ends the if-else check
+        action_btn.innerHTML = "RESET";
+        action_btnEvent.addEventListener("click", fightReset, false);
+
+        //break;      // ends the if-else check
     } // end if-else statement
 
    }   //end for-loop

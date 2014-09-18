@@ -64,28 +64,24 @@ body{
 }
 
 #fight_btn{
+    width: 123px;
 	position: absolute;
 	z-index: 25;
-	margin: 30% 44%;
+	margin: 20% 44%;
+
 }
 
- h1{
+#fight_btn h1{
     font-family: Impact, sans-serif;
     font-size: 25px;
     color: #fff;
     font-weight: bold;
-    text-align: center;
-}
-
-#fight_btn h2{
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    color: #ccc;
-    position: absolute;
-    z-index: auto;
+    vertical-align: middle;
     text-align: center;
 
+
 }
+
 
 #fight_bg{
 	position: fixed;
@@ -124,7 +120,8 @@ body{
 	font-family:'Open Sans',arial;
 	font-size:20px;
 	font-weight:bold;
-	padding:8px 25px;
+	padding:8px 30px;
+    text-align: center;
 	text-decoration:none;
 }
 
