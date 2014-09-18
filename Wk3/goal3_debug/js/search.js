@@ -1,4 +1,4 @@
-// Cathleen Carbonell || Due Date: September 12, 2014
+// Cathleen Carbonell || Due Date: September 19, 2014
 // Create privatized scope using a self-executing function
 (function(){            // self-executing function loads when the user arrives onto search site
 	
@@ -35,10 +35,9 @@
 	var search = function(query){        // search FN
 		
 		// split the user's search query string into an array
-		var queryArray = query.split(" ");       //joins method -- joining the search query into a string, returning it to the console as an array
+		var queryArray = query.split(" ");       //split method -- splits the search query, returning it to the console as an array
 		// array to store matched results from database.js
-		var results = [];                       //I seriously do not know what happened here. Is this supposed to be a function?
-
+		var results = [];                      // splitting the query into the array
 		// loop through each index of db array
 		for(var i=0, j=db.length; i<j; i++) {        //db = database, checks the back-end server side database (in this case: database.js) and matches the length of user-side query with the information in the db
 

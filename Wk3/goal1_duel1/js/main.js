@@ -40,7 +40,7 @@ Assignment: Goal1: Assignment: Duel1
 
 console.log(champ1.name , champ2.name); // test print if champ1 and champ2 variables are working
 
-    /*//player name
+    /*//player name -- commented out with the new DOM interactions
     var Nightwing = ["Nightwing",20,100];            // Player 1 stats array: Nightwing, 20 damage points(dp), 100 health points(hp)
     var Wolverine = ["Wolverine",20,100];            // Player 2 stats array: Wolverine, 20 dp, 100 hp
 
@@ -68,12 +68,12 @@ console.log(champ1.name , champ2.name); // test print if champ1 and champ2 varia
 
 //FUNCTIONS
 function dmgPrint(){
-    champ1hp.innerHTML = champ1.hp;                     // Prints champ1 damage after clicking FIGHT btn
-    champ2hp.innerHTML = champ2.hp;                     // Prints champ2 damage after clicking FIGHT btn
+    champ1hp.innerHTML = champ1.hp;                     // Prints champ1 damage onto the web page app after clicking FIGHT btn
+    champ2hp.innerHTML = champ2.hp;                     // Prints champ2 damage onto the web page app after clicking FIGHT btn
 }
 
-function fightReset(){
-    location.reload(true);
+function fightReset(){                                  // Resets the app after the user is finished
+    location.reload(true);                              // reloads the page
 }
 
 //fight function: executed for the purpose of taking away the player HP (Health)
@@ -106,8 +106,8 @@ function fight(){
     if(results === "no winner"){        //if there is no winner, this no winner within the round, this if-else statement is run
         round++;
         //alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
-        roundtxt.innerHTML = " ROUND "+ round + "<br><br>";
-        dmgPrint();
+        roundtxt.innerHTML = " ROUND "+ round + "<br><br>";     // Changes the round as the user clicks the FIGHT! button
+        dmgPrint();        // Calls the dmgPrint function
         break;
     }else{
         //alert(results);
