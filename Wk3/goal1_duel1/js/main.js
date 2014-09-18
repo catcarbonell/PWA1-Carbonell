@@ -10,12 +10,22 @@ Assignment: Goal1: Assignment: Duel1
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
 //VARIABLES
+    //FIGHTER OBJECT ARRAYS:
+    var fighters =[{
+        name: Nightwing,    // Variable for the "Nightwing" object array, index0/index[0] name
+        dp: 20,             // index0.dp
+        hp: 100             // index0.hp
+        },{
+        name: Wolverine,    // Variable for the "Wolverine" object array, index1/index[1] name
+        dp: 20,             // index1.dp
+        hp: 100             // index1.hp
+        }];
 
-    //player name
+    /*//player name
     var Nightwing = ["Nightwing",20,100];            // Player 1 stats array: Nightwing, 20 damage points(dp), 100 health points(hp)
     var Wolverine = ["Wolverine",20,100];            // Player 2 stats array: Wolverine, 20 dp, 100 hp
 
-    /*//player damage
+    //player damage
     var player1Damage = 20;
     var player2Damage = 20;
 
