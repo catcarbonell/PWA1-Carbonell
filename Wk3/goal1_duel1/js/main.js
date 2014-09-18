@@ -1,6 +1,6 @@
 /*
 Name: Cathleen Carbonell
-Date: 9/12/2014
+Date: 9/19/2014
 Assignment: Goal1: Assignment: Duel1
  */
 
