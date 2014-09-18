@@ -10,12 +10,12 @@ Assignment: Goal1: Assignment: Duel1
     console.log("FIGHT!!"); //prints out the string, "FIGHT!!"
 
 // DOM Pieces
-    var Nightwing_txt = document.querySelector(Nightwing).querySelector(p);     // selects the CSS Nightwing ID
-    var Wolverine_txt = document.querySelector(Wolverine).querySelector(p);     // selects the CSS Wolverine ID
-    var roundtxt = document.querySelector(h5);                                  // selects the roundtxt ID
-    var button = document.getElementById(fight_btn);                            // selects the fight button
+    var Nightwing_dmg = document.querySelector("#Nightwing").querySelector("h2");     // selects the CSS Nightwing ID
+    var Wolverine_dmg = document.querySelector("#Wolverine").querySelector("h2");     // selects the CSS Wolverine ID
+    var roundtxt = document.querySelector("h1");                                   // selects the h1 element
+    var button = document.getElementById("fight_btn");                            // selects the fight button
 
-    button.addEventListener("click", fight, false);
+    button.addEventListener("click", fight(), false);
 
 //VARIABLES
     //FIGHTER OBJECT ARRAYS:
@@ -28,6 +28,9 @@ Assignment: Goal1: Assignment: Duel1
         dp: 20,             // index1.dp
         hp: 100             // index1.hp
         }];
+
+    var Nightwing = fighter.index0;
+    var Wolverine = fighter.index1;
 
     /*//player name
     var Nightwing = ["Nightwing",20,100];            // Player 1 stats array: Nightwing, 20 damage points(dp), 100 health points(hp)
@@ -43,9 +46,13 @@ Assignment: Goal1: Assignment: Duel1
 
    //commented out the dp and hp since we're using these variables in an array
 */
-   //base round
-    var round = 0;                           //default round is 0, counts up as the fight progresses
 
+
+   //base round
+    var round = 1;                           //default round is 0, counts up as the fight progresses
+
+//Text for round
+    roundtxt.innerHTML = "Click FIGHT to START!";
 
 //FUNCTIONS
 
@@ -53,24 +60,25 @@ Assignment: Goal1: Assignment: Duel1
 function fight(){
 
     console.log('in the fight function');   // for troubleshooting purposes
-    alert(Nightwing[0]+ ":" + Nightwing[2] + " *VS* " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their starting HP
+    //alert(Nightwing[0]+ ":" + Nightwing[2] + " *VS* " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their starting HP
 
+// alert("got here 1");
     for (var i = 0; i < 10; i++){           // if 'i' is less than 10, add 1 to i
 
         //Minimum damage dealt toward each player
-        var minDamage1 = Nightwing[1] * .5; // utilizing the new array variable for Nightwing -- using the 1 index/dp
-        var minDamage2 = Wolverine[1] * .5; // new damage dealer for Wolverine
+        var minDamage1 = fighters.index0.dp * .5; // utilizing the new array variable for Nightwing -- using the 1 index/dp
+        var minDamage2 = fighters.index1.dp * .5; // new damage dealer for Wolverine
 
         //Random Damage equation variables -- creates the random amount of damage dealt toward the players
-        var f1 =  Math.floor(Math.random() * (Nightwing[1] - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Nightwing
-        var f2 =  Math.floor(Math.random() * (Wolverine[1] - minDamage2) + minDamage2); // The equation for the random amount of total damage dealt by Wolverine
+        var f1 =  Math.floor(Math.random() * (fighters.index0.dp - minDamage1) + minDamage1); // The equation for the random amount of total damage dealt by Nightwing
+        var f2 =  Math.floor(Math.random() * (fighters.index1.dp - minDamage2) + minDamage2); // The equation for the random amount of total damage dealt by Wolverine
 
         //inflict damage
-        Nightwing[2] -= f1;                // Nightwing's hp index - the damage variables
-        Wolverine[2] -= f2;                // Wolverine's hp index - the damage variables
+       fighters.index0.hp -= f1;                // Nightwing's hp index - the damage variables
+       fighters.index1.hp -= f2;                // Wolverine's hp index - the damage variables
 
        // Hero damage vs HP display
-        console.log(Nightwing[0] + ":" + Nightwing[2] + " " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
+       // console.log(Nightwing[0] + ":" + Nightwing[2] + " " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
 
 
 
@@ -80,16 +88,17 @@ function fight(){
 
     if(results === "no winner"){        //if there is no winner, this no winner within the round, this if-else statement is run
         round++;
-        alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
+        //alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
+        roundtxt.innerHTML = " ROUND "+ round;
     }else{
-        alert(results);
+        //alert(results);
+        roundtxt.innerHTML = results;
         break;      // ends the if-else check
     } // end if-else statement
 
    }   //end for-loop
 
 }   //end fight FN
-
 
 //winnerCheck FN: executed each time after fight function is run to end or continue fight function/rounds
 function winnerCheck(){
