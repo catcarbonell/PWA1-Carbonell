@@ -13,19 +13,39 @@ body{
    position: fixed;
 }
 
-#Nightwing{
+#champ1{
 	margin: 0 0 0 15%;
 	float:left;
     text-align: center;
 }
 
-#Nightwing p{
+#champ1 p{
     font-family: Impact, sans-serif;
     font-size:  25px;
     color: #fff;
 }
 
-#Nightwing h2{
+#champ1 h2{
+    font-family: Impact, sans-serif;
+    font-size:  25px;
+    color: #fff;
+}
+
+
+
+#champ2{
+	margin: -50px 0px 0px 48%;
+	float:left;
+    text-align: center
+}
+
+#champ2 p{
+	font-family: Impact, sans-serif;
+	font-size:  25px;
+    color: #fff;
+}
+
+#champ2 h2{
     font-family: Impact, sans-serif;
     font-size:  25px;
     color: #fff;
@@ -42,25 +62,6 @@ body{
     font-size:  25px;
     color: #fff;
 }
-
-#Wolverine{
-	margin: -50px 0px 0px 48%;
-	float:left;
-    text-align: center
-}
-
-#Wolverine p{
-	font-family: Impact, sans-serif;
-	font-size:  25px;
-    color: #fff;
-}
-
-#Wolverine h2{
-    font-family: Impact, sans-serif;
-    font-size:  25px;
-    color: #fff;
-}
-
 
 #fight_btn{
 	position: absolute;
