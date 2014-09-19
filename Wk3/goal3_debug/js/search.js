@@ -20,7 +20,7 @@
             //end while statement
         }
 		// Check search length, must have 3 characters
-		if(query.length < 3){               //alerts user that their search query is too small, it must be more than 3 characters
+		if(query.length <= 3){               //alerts user that their search query is too small, it must be more than 3 characters
 			alert("Your search query is too small, try again."); // SYNTAX -- needed to add the ending quote
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
@@ -43,8 +43,8 @@
 
             // each db[i] is a single video item, each title ends with a pipe "|"
             // save a lowercase variable of the video title
-            var dbTitleEnd = db[i].indexOf('|');
-            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);
+            var dbTitleEnd = db[i].indexOf('|');                                // Returns an index of the array query
+            var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);          //toLowerCase must be camel-cased, whereas substring must be all lowercase
 
             // loop through the user's search query words
             // save a lowercase variable of the search keyword
@@ -62,9 +62,10 @@
         }   //end for loop db.length
 
 		results.sort();     // method organizes results
-		
+		//console.log("TEST.");
+
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
+		if(results.length === 0){
 			noMatch();  // runs the no match FN
 		}else{
 			showMatches(results);       // runs the showMatches FN which prints the results
@@ -96,7 +97,7 @@
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			title = results[i].substring(0, titleEnd);  // "substring" should be lowercase
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
