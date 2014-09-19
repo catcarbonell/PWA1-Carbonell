@@ -15,7 +15,7 @@
 			query = query.substring(1, query.length);       //query.length -- checks the length the user query (what is typed into the search box)
 		} //end while statement
 
-		while(query.charAt(query.length-1) === "") {
+		while(query.charAt(query.length-1) === " ") {
             query = query.substring(0, query.length - 1);     //method .substring takes the characters from the specified string and returns a new sub string
             //end while statement
         }
