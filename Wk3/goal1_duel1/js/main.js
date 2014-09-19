@@ -97,6 +97,8 @@ function fight(){
        champ1.hp -= f1;                // Champ1's hp index - the damage variables
        champ2.hp -= f2;                // Champ2's hp index - the damage variables
 
+        console.log(round, f1, f2);
+
        // Hero damage vs HP display
        // console.log(Nightwing[0] + ":" + Nightwing[2] + " " + Wolverine[0] + ":" + Wolverine[2]); // calls an alert displaying player 1 and 2's names and their HP w/ the damage dealt
 
@@ -107,7 +109,8 @@ function fight(){
         round++;
         //alert(" ROUND "+ round + " OVER || " + Nightwing[0]+ ": " + Nightwing[2] + " *VS* " + Wolverine[0] + ": " + Wolverine[2]);
         roundtxt.innerHTML = " ROUND "+ round + "<br><br>";     // Changes the round as the user clicks the FIGHT! button
-        dmgPrint();        // Calls the dmgPrint function
+        dmgPrint();
+        // Calls the dmgPrint function
         break;
     }else{
         //alert(results);
@@ -117,7 +120,7 @@ function fight(){
         action_btn.innerHTML = "RESET";
         action_btnEvent.addEventListener("click", fightReset, false);
 
-        //break;      // ends the if-else check
+        break;      // ends the if-else check
     } // end if-else statement
 
    }   //end for-loop
