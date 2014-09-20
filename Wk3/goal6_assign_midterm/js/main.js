@@ -8,49 +8,27 @@
 (function() {
 
 // VARIABLES
-//var i = 0; // Global object to count objects
+// Global button w/ DOM element
+var button = document.querySelector(".buttonred");
+
+// Global object to count objects
+var i = 0;
+
+// Student's info object array
 var students = [
-        {                       // Student's info object array
-            name: "The Doctor",
-            address: {
-                street: '1 Gallifrey Planet',
-                city: 'Distant Galaxy',
-                state: 'Universe'},
+        {
+            name: 'The Doctor',
+            address: {street: '1 Gallifrey Planet',  city: 'Distant Galaxy', state: 'Universe'},
             gpa: [4, 4.25, 5],
             date: new Date()
         },
         {
-            name: "Diana Lance",
-            address: {
-                street: '2020 Amazon Place',
-                city: 'Themyscira',
-                state: 'Bermuda Triangle'},
+            name: 'Diana Lance',
+            address: {street: '2020 Amazon Place', city: 'Themyscira', state: 'Bermuda Triangle'},
             gpa: [4, 3.8, 3.9],
             date: new Date()
         }
     ];
-
-    /*{
-     name: "Avatar Korra",
-     address:{
-     street: '4 Yue Lane' ,
-     city: 'Southern Water Tribe',
-     state: 'South Pole'},
-     gpa: [2.8, 3.2, 3.6]
-     }*/
-
-// DOM: QUERYSELECT GETELEMENTBYID
-
-    /*
-     var name = document.querySelector("#name"); // For the "name" object
-     var address = document.querySelector("#address"); // For the "address" object
-     var gpa = document.querySelector("#gpa"); // For the "gpa" object
-     var gpaavg = document.querySelector("#gpaavg"); // For the "avg" object
-     var date = document.querySelector("#date"); // For the "date object
-     var button = document.querySelector(".buttonred"); // Global red button
-     */
-// DOM: INNERHTML
-
 
 // FUNCTIONS
 
@@ -69,7 +47,7 @@ var consoleData = function (){
         return false;
     };
 
-//Create and add new student to the original students array
+//Dynamically add new student to the original students array
 var addData = function(newname, newstreet, newcity, newstate, newgpa, newdate){
 
         //.push method
@@ -96,11 +74,32 @@ var gpaAvg = function(myAry){
         return num.toFixed(2);
     };
 
+//DISPLAY all student info on HTML page
+var displayData = function(){
+    var innerName = document.getElementbyId("name");
+    var innerAddress = document.querySelector("#address");
+    var innerGpa = document.querySelector("#gpa");
+    var innerDate = document.querySelector("#date");
+    var innerAvgGpa = document.querySelector("#gpaavg");
 
-//Button for click event
-button.onclick = displayData;
+    if (i !== max+1){
+        innerName.innerHTML = 'Name: ' +  students[i].name;
+        innerAddress.innerHTML = 'Address: ' + students[i].address.street + ' ' + students[i].address.city + ' ' + students[i].address.state;
+        innerGpa.innerHTML = 'GPA: ' + students[i].gpa;
+        innerDate.innerHTML = 'Date: '
+            + students[i].date.getMonth() + "/"
+            + students[i].date.getDate() + "/"
+            + students[i].date.getFullYear();
+        console.log(students[i].gpa);
+    }
+}
+
+//Button for click event button.onclick = displayData;
 
 console.log('*** ORIGINAL OBJECTS ***');
-consoleData();
+consoleData();  //console logs all the data
+addData('Avatar Korra','4 Yue Lane' , 'Southern Water Tribe','South Pole', [2.8, 3.2, 3.6], new Date());
+
+
 
 }());
