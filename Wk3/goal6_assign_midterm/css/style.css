@@ -30,7 +30,19 @@ body{
 	line-height:16px; 
 	color:#7a7a7a;
 }
+#name{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
 
+#address{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+#gpa{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
 
 #contact-form textarea{
 	color: #7a7a7a;

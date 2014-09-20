@@ -51,6 +51,7 @@ var consoleData = function (){
 var addData = function(newname, newstreet, newcity, newstate, newgpa, newdate){
 
         //.push method
+
         students.push({
             name: newname,
             address: {
@@ -76,7 +77,7 @@ var gpaAvg = function(myAry){
 
 //DISPLAY all student info on HTML page
 var displayData = function(){
-    var innerName = document.getElementbyId("name");
+    var innerName = document.querySelector("#name");
     var innerAddress = document.querySelector("#address");
     var innerGpa = document.querySelector("#gpa");
     var innerDate = document.querySelector("#date");
@@ -90,16 +91,29 @@ var displayData = function(){
             + students[i].date.getMonth() + "/"
             + students[i].date.getDate() + "/"
             + students[i].date.getFullYear();
-        console.log(students[i].gpa);
+
+        var avg = gpaAvg(students[i].gpa);
+
+        innerAvgGpa.innerHtml = 'Average GPA: ' + avg;
+        console.log(students[i].gpa.length);
+    }else{
+        button.onclick = "return false";
+        document.querySelector('.buttonred').innerHTML = 'DONE';
     }
-}
+    i++; //increment number of items after each student object is processed
+    return false;
+};
 
 //Button for click event button.onclick = displayData;
+var max = students.length;
+button.onClick = displayData();
 
 console.log('*** ORIGINAL OBJECTS ***');
 consoleData();  //console logs all the data
 addData('Avatar Korra','4 Yue Lane' , 'Southern Water Tribe','South Pole', [2.8, 3.2, 3.6], new Date());
-
-
+console.log(' ');
+console.log('*** NEW OBJECT ADDED ***');
+consoleData();
+displayData();
 
 }());
